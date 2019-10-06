@@ -1,0 +1,3 @@
+FactorioItemBrowser\ExportQueue\Client\Request\Job\DetailsRequest:
+  access_type: public_method
+  exclusion_policy: all

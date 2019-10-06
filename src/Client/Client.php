@@ -82,6 +82,9 @@ class Client
     {
         return new GuzzleClient([
             'base_uri' => rtrim($options->getApiUrl(), '/') . '/',
+            'headers' => [
+                'X-Api-Key' => $options->getApiKey(),
+            ],
             'timeout' => $options->getTimeout(),
         ]);
     }
@@ -117,10 +120,8 @@ class Client
         return new Request(
             $endpoint->getRequestMethod(),
             ltrim($endpoint->getRequestPath($request), '/'),
-            [
-                'X-Api-Key' => $this->options->getApiKey(), // @todo Can the header be applied through the client constructor?
-            ],
-            '' // @todo Serialize body when available through endpoint
+            [],
+            $this->serializer->serialize($request, 'json')
         );
     }
 

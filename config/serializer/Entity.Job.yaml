@@ -1,0 +1,20 @@
+FactorioItemBrowser\ExportQueue\Client\Entity\Job:
+  access_type: public_method
+  exclusion_policy: all
+  properties:
+    id:
+      type: integer
+    combinationHash:
+      type: string
+    modNames:
+      type: array<string>
+    status:
+      type: string
+    errorMessage:
+      type: string
+    creationTime:
+      type: DateTime<'Y-m-d\TH:i:sP', '', 'Y-m-d\TH:i:sP'>
+    exportTime:
+      type: DateTime<'Y-m-d\TH:i:sP', '', 'Y-m-d\TH:i:sP'>
+    importTime:
+      type: DateTime<'Y-m-d\TH:i:sP', '', 'Y-m-d\TH:i:sP'>

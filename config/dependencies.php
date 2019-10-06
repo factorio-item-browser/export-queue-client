@@ -22,6 +22,9 @@ return [
             Client\Client::class => AutoWireFactory::class,
             Client\Options::class => Client\OptionsFactory::class,
 
+            Endpoint\Job\CreateEndpoint::class => AutoWireFactory::class,
+            Endpoint\Job\DetailsEndpoint::class => AutoWireFactory::class,
+            Endpoint\Job\UpdateEndpoint::class => AutoWireFactory::class,
             Endpoint\Node\PingEndpoint::class => AutoWireFactory::class,
 
             Service\EndpointService::class => AutoWireFactory::class,

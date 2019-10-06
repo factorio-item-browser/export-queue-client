@@ -19,7 +19,11 @@ return [
     ConfigKey::PROJECT => [
         ConfigKey::EXPORT_QUEUE_CLIENT => [
             ConfigKey::ENDPOINTS => [
+                Endpoint\Job\CreateEndpoint::class,
+                Endpoint\Job\DetailsEndpoint::class,
+                Endpoint\Job\UpdateEndpoint::class,
 
+                Endpoint\Node\PingEndpoint::class,
             ],
         ],
     ],

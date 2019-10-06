@@ -1,0 +1,8 @@
+FactorioItemBrowser\ExportQueue\Client\Request\Job\CreateRequest:
+  access_type: public_method
+  exclusion_policy: all
+  properties:
+    combinationHash:
+      type: string
+    modNames:
+      type: array<string>

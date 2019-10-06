@@ -1,0 +1,3 @@
+FactorioItemBrowser\ExportQueue\Client\Response\EmptyResponse:
+  access_type: public_method
+  exclusion_policy: all
