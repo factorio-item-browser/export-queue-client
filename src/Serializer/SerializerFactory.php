@@ -32,7 +32,7 @@ class SerializerFactory implements FactoryInterface
         $builder
             ->addMetadataDir(
                 (string) realpath(__DIR__ . '/../../config/serializer'),
-                'FactorioItemBrowser\ExportQueueClient'
+                'FactorioItemBrowser\ExportQueue\Client'
             )
             ->setPropertyNamingStrategy(new IdenticalPropertyNamingStrategy());
 
