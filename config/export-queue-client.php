@@ -21,6 +21,7 @@ return [
             ConfigKey::ENDPOINTS => [
                 Endpoint\Job\CreateEndpoint::class,
                 Endpoint\Job\DetailsEndpoint::class,
+                Endpoint\Job\ListEndpoint::class,
                 Endpoint\Job\UpdateEndpoint::class,
 
                 Endpoint\Node\PingEndpoint::class,

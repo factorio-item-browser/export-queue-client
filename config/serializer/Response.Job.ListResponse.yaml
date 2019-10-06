@@ -1,0 +1,6 @@
+FactorioItemBrowser\ExportQueue\Client\Response\Job\ListResponse:
+  access_type: public_method
+  exclusion_policy: all
+  properties:
+    jobs:
+      type: array<FactorioItemBrowser\ExportQueue\Client\Entity\Job>
