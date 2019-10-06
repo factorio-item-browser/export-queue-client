@@ -39,7 +39,7 @@ use ReflectionException;
  */
 class ClientTest extends TestCase
 {
-use ReflectionTrait;
+    use ReflectionTrait;
 
     /**
      * The mocked endpoint service.

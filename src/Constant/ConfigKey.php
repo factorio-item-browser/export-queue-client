@@ -51,5 +51,4 @@ interface ConfigKey
      * The key for the timeout option.
      */
     public const OPTION_TIMEOUT = 'timeout';
-
 }
