@@ -15,10 +15,10 @@ use FactorioItemBrowser\ExportQueue\Client\Request\RequestInterface;
 class CreateRequest implements RequestInterface
 {
     /**
-     * The combination hash for the export job.
+     * The combination id for the export job.
      * @var string
      */
-    protected $combinationHash = '';
+    protected $combinationId = '';
 
     /**
      * The mod names to export as combination.
@@ -27,23 +27,23 @@ class CreateRequest implements RequestInterface
     protected $modNames = [];
 
     /**
-     * Sets the combination hash for the export job.
-     * @param string $combinationHash
+     * Sets the combination id for the export job.
+     * @param string $combinationId
      * @return $this
      */
-    public function setCombinationHash(string $combinationHash): self
+    public function setCombinationId(string $combinationId): self
     {
-        $this->combinationHash = $combinationHash;
+        $this->combinationId = $combinationId;
         return $this;
     }
 
     /**
-     * Returns the combination hash for the export job.
+     * Returns the combination id for the export job.
      * @return string
      */
-    public function getCombinationHash(): string
+    public function getCombinationId(): string
     {
-        return $this->combinationHash;
+        return $this->combinationId;
     }
 
     /**

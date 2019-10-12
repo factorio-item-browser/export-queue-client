@@ -13,9 +13,9 @@ namespace FactorioItemBrowser\ExportQueue\Client\Constant;
 interface ParameterName
 {
     /**
-     * The parameter holding a combination hash.
+     * The parameter holding a combination id.
      */
-    public const COMBINATION_HASH = 'combination-hash';
+    public const COMBINATION_ID = 'combination-id';
 
     /**
      * The parameter holding a status.

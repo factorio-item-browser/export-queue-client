@@ -21,10 +21,10 @@ class Job
     protected $id = 0;
 
     /**
-     * The hash of the combination to be exported.
+     * The id of the combination to be exported.
      * @var string
      */
-    protected $combinationHash = '';
+    protected $combinationId = '';
 
     /**
      * The mod names to be exported as combination.
@@ -83,23 +83,23 @@ class Job
     }
 
     /**
-     * Sets the hash of the combination to be exported.
-     * @param string $combinationHash
+     * Sets the id of the combination to be exported.
+     * @param string $combinationId
      * @return $this
      */
-    public function setCombinationHash(string $combinationHash): self
+    public function setCombinationId(string $combinationId): self
     {
-        $this->combinationHash = $combinationHash;
+        $this->combinationId = $combinationId;
         return $this;
     }
 
     /**
-     * Returns the hash of the combination to be exported.
+     * Returns the id of the combination to be exported.
      * @return string
      */
-    public function getCombinationHash(): string
+    public function getCombinationId(): string
     {
-        return $this->combinationHash;
+        return $this->combinationId;
     }
 
     /**

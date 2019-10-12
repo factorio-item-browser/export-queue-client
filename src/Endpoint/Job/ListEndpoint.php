@@ -45,7 +45,7 @@ class ListEndpoint implements EndpointInterface
     {
         /* @var ListRequest $request */
         $parameters = array_filter([
-            ParameterName::COMBINATION_HASH => $request->getCombinationHash(),
+            ParameterName::COMBINATION_ID => $request->getCombinationId(),
             ParameterName::STATUS => $request->getStatus(),
             ParameterName::LIMIT => $request->getLimit(),
         ]);

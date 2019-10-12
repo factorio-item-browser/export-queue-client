@@ -24,23 +24,23 @@ class ListRequestTest extends TestCase
     {
         $request = new ListRequest();
 
-        $this->assertSame('', $request->getCombinationHash());
+        $this->assertSame('', $request->getCombinationId());
         $this->assertSame('', $request->getStatus());
         $this->assertSame(0, $request->getLimit());
     }
 
     /**
-     * Tests the setting and getting the combination hash.
-     * @covers ::getCombinationHash
-     * @covers ::setCombinationHash
+     * Tests the setting and getting the combination id.
+     * @covers ::getCombinationId
+     * @covers ::setCombinationId
      */
-    public function testSetAndGetCombinationHash(): void
+    public function testSetAndGetCombinationId(): void
     {
-        $combinationHash = 'abc';
+        $combinationId = 'abc';
         $request = new ListRequest();
 
-        $this->assertSame($request, $request->setCombinationHash($combinationHash));
-        $this->assertSame($combinationHash, $request->getCombinationHash());
+        $this->assertSame($request, $request->setCombinationId($combinationId));
+        $this->assertSame($combinationId, $request->getCombinationId());
     }
 
     /**

@@ -4,7 +4,7 @@ FactorioItemBrowser\ExportQueue\Client\Entity\Job:
   properties:
     id:
       type: integer
-    combinationHash:
+    combinationId:
       type: string
     modNames:
       type: array<string>

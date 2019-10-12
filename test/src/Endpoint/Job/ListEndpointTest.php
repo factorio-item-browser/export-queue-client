@@ -53,12 +53,12 @@ class ListEndpointTest extends TestCase
      */
     public function testGetRequestPath(): void
     {
-        $expectedResult = '/job/list?combination-hash=abc&status=def&limit=42';
+        $expectedResult = '/job/list?combination-id=abc&status=def&limit=42';
 
         /* @var ListRequest&MockObject $request */
         $request = $this->createMock(ListRequest::class);
         $request->expects($this->once())
-                ->method('getCombinationHash')
+                ->method('getCombinationId')
                 ->willReturn('abc');
         $request->expects($this->once())
                 ->method('getStatus')
@@ -84,7 +84,7 @@ class ListEndpointTest extends TestCase
         /* @var ListRequest&MockObject $request */
         $request = $this->createMock(ListRequest::class);
         $request->expects($this->once())
-                ->method('getCombinationHash')
+                ->method('getCombinationId')
                 ->willReturn('');
         $request->expects($this->once())
                 ->method('getStatus')

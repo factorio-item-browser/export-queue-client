@@ -27,7 +27,7 @@ class DetailsResponseTest extends SerializerTestCase
     {
         $response = new DetailsResponse();
         $response->setId(42)
-                 ->setCombinationHash('abc')
+                 ->setCombinationId('abc')
                  ->setModNames(['def', 'ghi'])
                  ->setStatus('jkl')
                  ->setErrorMessage('mno')
@@ -45,7 +45,7 @@ class DetailsResponseTest extends SerializerTestCase
     {
         return [
             'id' => 42,
-            'combinationHash' => 'abc',
+            'combinationId' => 'abc',
             'modNames' => ['def', 'ghi'],
             'status' => 'jkl',
             'errorMessage' => 'mno',

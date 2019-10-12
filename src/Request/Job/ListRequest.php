@@ -15,10 +15,10 @@ use FactorioItemBrowser\ExportQueue\Client\Request\RequestInterface;
 class ListRequest implements RequestInterface
 {
     /**
-     * The combination hash of the jobs to match.
+     * The combination id of the jobs to match.
      * @var string
      */
-    protected $combinationHash = '';
+    protected $combinationId = '';
 
     /**
      * The status of the jobs to match.
@@ -33,23 +33,23 @@ class ListRequest implements RequestInterface
     protected $limit = 0;
 
     /**
-     * Sets the combination hash of the jobs to match.
-     * @param string $combinationHash
+     * Sets the combination id of the jobs to match.
+     * @param string $combinationId
      * @return $this
      */
-    public function setCombinationHash(string $combinationHash): self
+    public function setCombinationId(string $combinationId): self
     {
-        $this->combinationHash = $combinationHash;
+        $this->combinationId = $combinationId;
         return $this;
     }
 
     /**
-     * Returns the combination hash of the jobs to match.
+     * Returns the combination id of the jobs to match.
      * @return string
      */
-    public function getCombinationHash(): string
+    public function getCombinationId(): string
     {
-        return $this->combinationHash;
+        return $this->combinationId;
     }
 
     /**

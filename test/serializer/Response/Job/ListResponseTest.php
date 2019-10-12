@@ -28,7 +28,7 @@ class ListResponseTest extends SerializerTestCase
     {
         $job1 = new Job();
         $job1->setId(42)
-             ->setCombinationHash('abc')
+             ->setCombinationId('abc')
              ->setModNames(['def', 'ghi'])
              ->setStatus('jkl')
              ->setErrorMessage('mno')
@@ -38,7 +38,7 @@ class ListResponseTest extends SerializerTestCase
 
         $job2 = new Job();
         $job2->setId(21)
-             ->setCombinationHash('pqr')
+             ->setCombinationId('pqr')
              ->setModNames(['stu', 'vwx'])
              ->setStatus('yza')
              ->setErrorMessage('bcd')
@@ -62,7 +62,7 @@ class ListResponseTest extends SerializerTestCase
             'jobs' => [
                 [
                     'id' => 42,
-                    'combinationHash' => 'abc',
+                    'combinationId' => 'abc',
                     'modNames' => ['def', 'ghi'],
                     'status' => 'jkl',
                     'errorMessage' => 'mno',
@@ -72,7 +72,7 @@ class ListResponseTest extends SerializerTestCase
                 ],
                 [
                     'id' => 21,
-                    'combinationHash' => 'pqr',
+                    'combinationId' => 'pqr',
                     'modNames' => ['stu', 'vwx'],
                     'status' => 'yza',
                     'errorMessage' => 'bcd',

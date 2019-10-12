@@ -24,22 +24,22 @@ class CreateRequestTest extends TestCase
     {
         $request = new CreateRequest();
 
-        $this->assertSame('', $request->getCombinationHash());
+        $this->assertSame('', $request->getCombinationId());
         $this->assertSame([], $request->getModNames());
     }
 
     /**
-     * Tests the setting and getting the combination hash.
-     * @covers ::getCombinationHash
-     * @covers ::setCombinationHash
+     * Tests the setting and getting the combination id.
+     * @covers ::getCombinationId
+     * @covers ::setCombinationId
      */
-    public function testSetAndGetCombinationHash(): void
+    public function testSetAndGetCombinationId(): void
     {
-        $combinationHash = 'abc';
+        $combinationId = 'abc';
         $request = new CreateRequest();
 
-        $this->assertSame($request, $request->setCombinationHash($combinationHash));
-        $this->assertSame($combinationHash, $request->getCombinationHash());
+        $this->assertSame($request, $request->setCombinationId($combinationId));
+        $this->assertSame($combinationId, $request->getCombinationId());
     }
 
     /**

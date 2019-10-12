@@ -26,7 +26,7 @@ class JobTest extends TestCase
         $entity = new Job();
 
         $this->assertSame(0, $entity->getId());
-        $this->assertSame('', $entity->getCombinationHash());
+        $this->assertSame('', $entity->getCombinationId());
         $this->assertSame([], $entity->getModNames());
         $this->assertSame('', $entity->getStatus());
         $this->assertSame('', $entity->getErrorMessage());
@@ -50,17 +50,17 @@ class JobTest extends TestCase
     }
 
     /**
-     * Tests the setting and getting the combination hash.
-     * @covers ::getCombinationHash
-     * @covers ::setCombinationHash
+     * Tests the setting and getting the combination id.
+     * @covers ::getCombinationId
+     * @covers ::setCombinationId
      */
-    public function testSetAndGetCombinationHash(): void
+    public function testSetAndGetCombinationId(): void
     {
-        $combinationHash = 'abc';
+        $combinationId = 'abc';
         $entity = new Job();
 
-        $this->assertSame($entity, $entity->setCombinationHash($combinationHash));
-        $this->assertSame($combinationHash, $entity->getCombinationHash());
+        $this->assertSame($entity, $entity->setCombinationId($combinationId));
+        $this->assertSame($combinationId, $entity->getCombinationId());
     }
 
     /**

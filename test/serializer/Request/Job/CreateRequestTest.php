@@ -23,7 +23,7 @@ class CreateRequestTest extends SerializerTestCase
     protected function getObject(): object
     {
         $request = new CreateRequest();
-        $request->setCombinationHash('abc')
+        $request->setCombinationId('abc')
                 ->setModNames(['def', 'ghi']);
         return $request;
     }
@@ -35,7 +35,7 @@ class CreateRequestTest extends SerializerTestCase
     protected function getData(): array
     {
         return [
-            'combinationHash' => 'abc',
+            'combinationId' => 'abc',
             'modNames' => ['def', 'ghi'],
         ];
     }
