@@ -53,13 +53,13 @@ class DetailsEndpointTest extends TestCase
      */
     public function testGetRequestPath(): void
     {
-        $expectedResult = '/job/42';
+        $expectedResult = '/job/abc';
 
         /* @var DetailsRequest&MockObject $request */
         $request = $this->createMock(DetailsRequest::class);
         $request->expects($this->once())
                 ->method('getJobId')
-                ->willReturn(42);
+                ->willReturn('abc');
 
         $endpoint = new DetailsEndpoint();
         $result = $endpoint->getRequestPath($request);

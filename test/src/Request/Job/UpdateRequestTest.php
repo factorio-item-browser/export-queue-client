@@ -24,7 +24,7 @@ class UpdateRequestTest extends TestCase
     {
         $request = new UpdateRequest();
 
-        $this->assertSame(0, $request->getJobId());
+        $this->assertSame('', $request->getJobId());
         $this->assertSame('', $request->getStatus());
         $this->assertSame('', $request->getErrorMessage());
     }
@@ -36,7 +36,7 @@ class UpdateRequestTest extends TestCase
      */
     public function testSetAndGetJobId(): void
     {
-        $jobId = 42;
+        $jobId = 'abc';
         $request = new UpdateRequest();
 
         $this->assertSame($request, $request->setJobId($jobId));

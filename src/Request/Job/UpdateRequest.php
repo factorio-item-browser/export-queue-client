@@ -15,10 +15,10 @@ use FactorioItemBrowser\ExportQueue\Client\Request\RequestInterface;
 class UpdateRequest implements RequestInterface
 {
     /**
-     * The ID of the export job.
-     * @var int
+     * The id of the export job.
+     * @var string
      */
-    protected $jobId = 0;
+    protected $jobId = '';
 
     /**
      * The new status of the export job.
@@ -33,21 +33,21 @@ class UpdateRequest implements RequestInterface
     protected $errorMessage = '';
 
     /**
-     * Sets the ID of the export job.
-     * @param int $jobId
+     * Sets the id of the export job.
+     * @param string $jobId
      * @return $this
      */
-    public function setJobId(int $jobId): self
+    public function setJobId(string $jobId): self
     {
         $this->jobId = $jobId;
         return $this;
     }
 
     /**
-     * Returns the ID of the export job.
-     * @return int
+     * Returns the id of the export job.
+     * @return string
      */
-    public function getJobId(): int
+    public function getJobId(): string
     {
         return $this->jobId;
     }

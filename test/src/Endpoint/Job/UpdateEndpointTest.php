@@ -53,13 +53,13 @@ class UpdateEndpointTest extends TestCase
      */
     public function testGetRequestPath(): void
     {
-        $expectedResult = '/job/42';
+        $expectedResult = '/job/abc';
 
         /* @var UpdateRequest&MockObject $request */
         $request = $this->createMock(UpdateRequest::class);
         $request->expects($this->once())
                 ->method('getJobId')
-                ->willReturn(42);
+                ->willReturn('abc');
 
         $endpoint = new UpdateEndpoint();
         $result = $endpoint->getRequestPath($request);

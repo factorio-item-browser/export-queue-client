@@ -24,7 +24,7 @@ class DetailsRequestTest extends TestCase
     {
         $request = new DetailsRequest();
 
-        $this->assertSame(0, $request->getJobId());
+        $this->assertSame('', $request->getJobId());
     }
 
     /**
@@ -34,7 +34,7 @@ class DetailsRequestTest extends TestCase
      */
     public function testSetAndGetJobId(): void
     {
-        $jobId = 42;
+        $jobId = 'abc';
         $request = new DetailsRequest();
 
         $this->assertSame($request, $request->setJobId($jobId));

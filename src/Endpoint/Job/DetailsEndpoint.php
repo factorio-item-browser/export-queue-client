@@ -43,7 +43,7 @@ class DetailsEndpoint implements EndpointInterface
     public function getRequestPath(RequestInterface $request): string
     {
         /* @var DetailsRequest $request */
-        return sprintf('/job/%d', $request->getJobId());
+        return sprintf('/job/%s', $request->getJobId());
     }
 
     /**
