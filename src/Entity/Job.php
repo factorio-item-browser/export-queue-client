@@ -15,10 +15,10 @@ use DateTimeInterface;
 class Job
 {
     /**
-     * The ID of the export job.
-     * @var int
+     * The id of the export job.
+     * @var string
      */
-    protected $id = 0;
+    protected $id = '';
 
     /**
      * The id of the combination to be exported.
@@ -45,10 +45,22 @@ class Job
     protected $errorMessage = '';
 
     /**
+     * The creator of the export job.
+     * @var string
+     */
+    protected $creator = '';
+
+    /**
      * The time when the export job has was created.
      * @var DateTimeInterface|null
      */
     protected $creationTime = null;
+
+    /**
+     * The exporter processing the job.
+     * @var string
+     */
+    protected $exporter = '';
 
     /**
      * The time when the export job was processed.
@@ -57,27 +69,33 @@ class Job
     protected $exportTime = null;
 
     /**
+     * The importer adding the data to the database.
+     * @var string
+     */
+    protected $importer = '';
+
+    /**
      * The time when the export job was imported into the database.
      * @var DateTimeInterface|null
      */
     protected $importTime = null;
 
     /**
-     * Sets the ID of the export job.
-     * @param int $id
+     * Sets the id of the export job.
+     * @param string $id
      * @return $this
      */
-    public function setId(int $id): self
+    public function setId(string $id): self
     {
         $this->id = $id;
         return $this;
     }
 
     /**
-     * Returns the ID of the export job.
-     * @return int
+     * Returns the id of the export job.
+     * @return string
      */
-    public function getId(): int
+    public function getId(): string
     {
         return $this->id;
     }
@@ -163,6 +181,26 @@ class Job
     }
 
     /**
+     * Sets the creator of the export job.
+     * @param string $creator
+     * @return $this
+     */
+    public function setCreator(string $creator): self
+    {
+        $this->creator = $creator;
+        return $this;
+    }
+
+    /**
+     * Returns the creator of the export job.
+     * @return string
+     */
+    public function getCreator(): string
+    {
+        return $this->creator;
+    }
+
+    /**
      * Sets the time when the export job has was created.
      * @param DateTimeInterface|null $creationTime
      * @return $this
@@ -183,6 +221,26 @@ class Job
     }
 
     /**
+     * Sets the exporter processing the job.
+     * @param string $exporter
+     * @return $this
+     */
+    public function setExporter(string $exporter): self
+    {
+        $this->exporter = $exporter;
+        return $this;
+    }
+
+    /**
+     * Returns the exporter processing the job.
+     * @return string
+     */
+    public function getExporter(): string
+    {
+        return $this->exporter;
+    }
+
+    /**
      * Sets the time when the export job was processed.
      * @param DateTimeInterface|null $exportTime
      * @return $this
@@ -200,6 +258,26 @@ class Job
     public function getExportTime(): ?DateTimeInterface
     {
         return $this->exportTime;
+    }
+
+    /**
+     * Sets the importer adding the data to the database.
+     * @param string $importer
+     * @return $this
+     */
+    public function setImporter(string $importer): self
+    {
+        $this->importer = $importer;
+        return $this;
+    }
+
+    /**
+     * Returns the importer adding the data to the database.
+     * @return string
+     */
+    public function getImporter(): string
+    {
+        return $this->importer;
     }
 
     /**

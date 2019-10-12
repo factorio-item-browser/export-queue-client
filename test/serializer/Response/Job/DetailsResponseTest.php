@@ -26,13 +26,16 @@ class DetailsResponseTest extends SerializerTestCase
     protected function getObject(): object
     {
         $response = new DetailsResponse();
-        $response->setId(42)
-                 ->setCombinationId('abc')
-                 ->setModNames(['def', 'ghi'])
-                 ->setStatus('jkl')
-                 ->setErrorMessage('mno')
+        $response->setId('abc')
+                 ->setCombinationId('def')
+                 ->setModNames(['ghi', 'jkl'])
+                 ->setStatus('mno')
+                 ->setErrorMessage('pqr')
+                 ->setCreator('stu')
                  ->setCreationTime(new DateTime('2038-01-17 03:14:00'))
+                 ->setExporter('vwx')
                  ->setExportTime(new DateTime('2038-01-18 03:14:00'))
+                 ->setImporter('yza')
                  ->setImportTime(new DateTime('2038-01-19 03:14:00'));
         return $response;
     }
@@ -44,13 +47,16 @@ class DetailsResponseTest extends SerializerTestCase
     protected function getData(): array
     {
         return [
-            'id' => 42,
-            'combinationId' => 'abc',
-            'modNames' => ['def', 'ghi'],
-            'status' => 'jkl',
-            'errorMessage' => 'mno',
+            'id' => 'abc',
+            'combinationId' => 'def',
+            'modNames' => ['ghi', 'jkl'],
+            'status' => 'mno',
+            'errorMessage' => 'pqr',
+            'creator' => 'stu',
             'creationTime' => '2038-01-17T03:14:00+00:00',
+            'exporter' => 'vwx',
             'exportTime' => '2038-01-18T03:14:00+00:00',
+            'importer' => 'yza',
             'importTime' => '2038-01-19T03:14:00+00:00',
         ];
     }

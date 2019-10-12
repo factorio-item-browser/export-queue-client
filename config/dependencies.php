@@ -26,7 +26,6 @@ return [
             Endpoint\Job\DetailsEndpoint::class => AutoWireFactory::class,
             Endpoint\Job\ListEndpoint::class => AutoWireFactory::class,
             Endpoint\Job\UpdateEndpoint::class => AutoWireFactory::class,
-            Endpoint\Node\PingEndpoint::class => AutoWireFactory::class,
 
             Service\EndpointService::class => AutoWireFactory::class,
 

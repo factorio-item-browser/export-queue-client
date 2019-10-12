@@ -3,7 +3,7 @@ FactorioItemBrowser\ExportQueue\Client\Entity\Job:
   exclusion_policy: all
   properties:
     id:
-      type: integer
+      type: string
     combinationId:
       type: string
     modNames:
@@ -12,9 +12,19 @@ FactorioItemBrowser\ExportQueue\Client\Entity\Job:
       type: string
     errorMessage:
       type: string
+      skip_when_empty: string
+    creator:
+      type: string
+      skip_when_empty: string
     creationTime:
       type: DateTime<'Y-m-d\TH:i:sP', '', 'Y-m-d\TH:i:sP'>
+    exporter:
+      type: string
+      skip_when_empty: string
     exportTime:
       type: DateTime<'Y-m-d\TH:i:sP', '', 'Y-m-d\TH:i:sP'>
+    importer:
+      type: string
+      skip_when_empty: string
     importTime:
       type: DateTime<'Y-m-d\TH:i:sP', '', 'Y-m-d\TH:i:sP'>

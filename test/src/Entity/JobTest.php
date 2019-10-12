@@ -25,13 +25,16 @@ class JobTest extends TestCase
     {
         $entity = new Job();
 
-        $this->assertSame(0, $entity->getId());
+        $this->assertSame('', $entity->getId());
         $this->assertSame('', $entity->getCombinationId());
         $this->assertSame([], $entity->getModNames());
         $this->assertSame('', $entity->getStatus());
         $this->assertSame('', $entity->getErrorMessage());
+        $this->assertSame('', $entity->getCreator());
         $this->assertNull($entity->getCreationTime());
+        $this->assertSame('', $entity->getExporter());
         $this->assertNull($entity->getExportTime());
+        $this->assertSame('', $entity->getImporter());
         $this->assertNull($entity->getImportTime());
     }
 
@@ -42,7 +45,7 @@ class JobTest extends TestCase
      */
     public function testSetAndGetId(): void
     {
-        $id = 42;
+        $id = 'abc';
         $entity = new Job();
 
         $this->assertSame($entity, $entity->setId($id));
@@ -106,6 +109,20 @@ class JobTest extends TestCase
     }
 
     /**
+     * Tests the setting and getting the creator.
+     * @covers ::getCreator
+     * @covers ::setCreator
+     */
+    public function testSetAndGetCreator(): void
+    {
+        $creator = 'abc';
+        $entity = new Job();
+
+        $this->assertSame($entity, $entity->setCreator($creator));
+        $this->assertSame($creator, $entity->getCreator());
+    }
+
+    /**
      * Tests the setting and getting the creation time.
      * @covers ::getCreationTime
      * @covers ::setCreationTime
@@ -120,6 +137,20 @@ class JobTest extends TestCase
     }
 
     /**
+     * Tests the setting and getting the exporter.
+     * @covers ::getExporter
+     * @covers ::setExporter
+     */
+    public function testSetAndGetExporter(): void
+    {
+        $exporter = 'abc';
+        $entity = new Job();
+
+        $this->assertSame($entity, $entity->setExporter($exporter));
+        $this->assertSame($exporter, $entity->getExporter());
+    }
+
+    /**
      * Tests the setting and getting the export time.
      * @covers ::getExportTime
      * @covers ::setExportTime
@@ -131,6 +162,20 @@ class JobTest extends TestCase
 
         $this->assertSame($entity, $entity->setExportTime($exportTime));
         $this->assertSame($exportTime, $entity->getExportTime());
+    }
+
+    /**
+     * Tests the setting and getting the importer.
+     * @covers ::getImporter
+     * @covers ::setImporter
+     */
+    public function testSetAndGetImporter(): void
+    {
+        $importer = 'abc';
+        $entity = new Job();
+
+        $this->assertSame($entity, $entity->setImporter($importer));
+        $this->assertSame($importer, $entity->getImporter());
     }
 
     /**
