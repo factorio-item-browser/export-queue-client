@@ -20,6 +20,7 @@ return [
     'dependencies' => [
         'factories'  => [
             Client\Client::class => AutoWireFactory::class,
+            Client\Facade::class => AutoWireFactory::class,
             Client\Options::class => Client\OptionsFactory::class,
 
             Endpoint\Job\CreateEndpoint::class => AutoWireFactory::class,
