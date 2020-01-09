@@ -43,14 +43,12 @@ class ListEndpoint implements EndpointInterface
      */
     public function getRequestPath(RequestInterface $request): string
     {
-        /* @var ListRequest $request */
-        $parameters = array_filter([
+        /** @var ListRequest $request */
+        return rtrim(sprintf('/job/list?%s', http_build_query(array_filter([
             ParameterName::COMBINATION_ID => $request->getCombinationId(),
             ParameterName::STATUS => $request->getStatus(),
             ParameterName::LIMIT => $request->getLimit(),
-        ]);
-
-        return rtrim(sprintf('/job/list?%s', http_build_query($parameters)), '?');
+        ]))), '?');
     }
 
     /**

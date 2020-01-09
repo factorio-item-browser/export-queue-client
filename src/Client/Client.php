@@ -141,8 +141,11 @@ class Client
         $endpoint = $this->endpointService->getEndpointForRequest($request);
         $responseContents = $this->getContentsFromMessage($clientResponse);
 
+        /** @var class-string<ResponseInterface> $responseClass */
+        $responseClass = $endpoint->getResponseClass();
+
         try {
-            $result = $this->serializer->deserialize($responseContents, $endpoint->getResponseClass(), 'json');
+            $result = $this->serializer->deserialize($responseContents, $responseClass, 'json');
         } catch (Exception $e) {
             $requestContents = $this->getContentsFromMessage($clientRequest);
             throw new InvalidResponseException($e->getMessage(), $requestContents, $responseContents, $e);
@@ -200,10 +203,10 @@ class Client
 
         try {
             $responseContents = $this->getContentsFromMessage($exception->getResponse());
+
+            /* @var ErrorResponse $errorResponse */
             $errorResponse = $this->serializer->deserialize($responseContents, ErrorResponse::class, 'json');
-            if ($errorResponse instanceof ErrorResponse) {
-                $result = $errorResponse->getMessage();
-            }
+            $result = $errorResponse->getMessage();
         } catch (Exception $e) {
             // Failed to fetch message from error response.
         }
