@@ -6,10 +6,10 @@ namespace FactorioItemBrowser\ExportQueue\Client\Client;
 
 use FactorioItemBrowser\ExportQueue\Client\Constant\ConfigKey;
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 
 /**
- *
+ * The factory of the options class.
  *
  * @author BluePsyduck <bluepsyduck@gmx.com>
  * @license http://opensource.org/licenses/GPL-3.0 GPL v3

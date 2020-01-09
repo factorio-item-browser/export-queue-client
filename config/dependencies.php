@@ -11,10 +11,11 @@ declare(strict_types=1);
 
 namespace FactorioItemBrowser\ExportQueue\Client;
 
-use BluePsyduck\ZendAutoWireFactory\AutoWireFactory;
+use BluePsyduck\LaminasAutowireFactory\AutoWireFactory;
 use FactorioItemBrowser\ExportQueue\Client\Constant\ConfigKey;
 use JMS\Serializer\SerializerInterface;
-use function BluePsyduck\ZendAutoWireFactory\injectAliasArray;
+
+use function BluePsyduck\LaminasAutowireFactory\injectAliasArray;
 
 return [
     'dependencies' => [
