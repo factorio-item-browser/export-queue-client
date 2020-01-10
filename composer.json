@@ -41,11 +41,6 @@
       "FactorioItemBrowserTestSerializer\\ExportQueue\\Client\\": "test/serializer/"
     }
   },
-  "extra": {
-    "zf": {
-      "config-provider": "FactorioItemBrowser\\ExportQueue\\Client\\ConfigProvider"
-    }
-  },
   "scripts": {
     "coverage-check": "coverage-check test/coverage/clover.xml 100",
     "phpcbf": "phpcbf -p --colors",
