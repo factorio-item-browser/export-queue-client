@@ -27,6 +27,12 @@ class ListRequest implements RequestInterface
     protected $status = '';
 
     /**
+     * The order to use for the results.
+     * @var string
+     */
+    protected $order = '';
+
+    /**
      * The number of jobs to return.
      * @var int
      */
@@ -70,6 +76,26 @@ class ListRequest implements RequestInterface
     public function getStatus(): string
     {
         return $this->status;
+    }
+
+    /**
+     * Sets the order to use for the results.
+     * @param string $order
+     * @return $this
+     */
+    public function setOrder(string $order): self
+    {
+        $this->order = $order;
+        return $this;
+    }
+
+    /**
+     * Returns the order to use for the results.
+     * @return string
+     */
+    public function getOrder(): string
+    {
+        return $this->order;
     }
 
     /**

@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+## Added
+
+* Property `order` to the `ListRequest`.
+
 ### Changed
 
 * Zend dependencies to Laminas dependencies.
