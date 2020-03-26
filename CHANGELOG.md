@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.1 - 2020-03-26
+
+## Fixed
+
+* Missing mapping for new `order` parameter in `ListEndpoint`.
+
 ## 1.1.0 - 2020-03-26
 
 ## Added

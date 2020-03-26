@@ -47,6 +47,7 @@ class ListEndpoint implements EndpointInterface
         return rtrim(sprintf('/job/list?%s', http_build_query(array_filter([
             ParameterName::COMBINATION_ID => $request->getCombinationId(),
             ParameterName::STATUS => $request->getStatus(),
+            ParameterName::ORDER => $request->getOrder(),
             ParameterName::LIMIT => $request->getLimit(),
         ]))), '?');
     }

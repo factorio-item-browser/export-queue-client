@@ -53,7 +53,7 @@ class ListEndpointTest extends TestCase
      */
     public function testGetRequestPath(): void
     {
-        $expectedResult = '/job/list?combination-id=abc&status=def&limit=42';
+        $expectedResult = '/job/list?combination-id=abc&status=def&order=ghi&limit=42';
 
         /* @var ListRequest&MockObject $request */
         $request = $this->createMock(ListRequest::class);
@@ -63,6 +63,9 @@ class ListEndpointTest extends TestCase
         $request->expects($this->once())
                 ->method('getStatus')
                 ->willReturn('def');
+        $request->expects($this->once())
+                ->method('getOrder')
+                ->willReturn('ghi');
         $request->expects($this->once())
                 ->method('getLimit')
                 ->willReturn(42);
@@ -88,6 +91,9 @@ class ListEndpointTest extends TestCase
                 ->willReturn('');
         $request->expects($this->once())
                 ->method('getStatus')
+                ->willReturn('');
+        $request->expects($this->once())
+                ->method('getOrder')
                 ->willReturn('');
         $request->expects($this->once())
                 ->method('getLimit')
