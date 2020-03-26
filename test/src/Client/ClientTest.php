@@ -80,7 +80,7 @@ class ClientTest extends TestCase
 
     /**
      * Creates and returns a mocked client.
-     * @param array $methods
+     * @param array|string[] $methods
      * @return Client|MockObject
      */
     protected function createMockedClient(array $methods): Client
@@ -89,7 +89,7 @@ class ClientTest extends TestCase
 
         /* @var Client&MockObject $client */
         $client = $this->getMockBuilder(Client::class)
-                       ->setMethods($methods)
+                       ->onlyMethods($methods)
                        ->disableOriginalConstructor()
                        ->getMock();
         $client->expects($this->once())
@@ -175,7 +175,7 @@ class ClientTest extends TestCase
         $promise1->expects($this->once())
                  ->method('then')
                  ->with(
-                     $this->callback(function ($callback) use ($clientResponse, $response) {
+                     $this->callback(function ($callback) use ($clientResponse, $response): bool {
                          $this->assertIsCallable($callback);
 
                          $result = $callback($clientResponse);
@@ -183,7 +183,7 @@ class ClientTest extends TestCase
 
                          return true;
                      }),
-                     $this->callback(function ($callback) use ($requestException) {
+                     $this->callback(function ($callback) use ($requestException): bool {
                          $this->assertIsCallable($callback);
 
                          $callback($requestException);

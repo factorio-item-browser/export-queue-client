@@ -42,7 +42,7 @@ class UpdateEndpoint implements EndpointInterface
      */
     public function getRequestPath(RequestInterface $request): string
     {
-        /* @var UpdateRequest $request */
+        /** @var UpdateRequest $request */
         return sprintf('/job/%s', $request->getJobId());
     }
 

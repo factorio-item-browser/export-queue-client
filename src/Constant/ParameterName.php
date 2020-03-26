@@ -23,6 +23,11 @@ interface ParameterName
     public const STATUS = 'status';
 
     /**
+     * The parameter holding the order.
+     */
+    public const ORDER = 'order';
+
+    /**
      * The parameter holding the limit.
      */
     public const LIMIT = 'limit';

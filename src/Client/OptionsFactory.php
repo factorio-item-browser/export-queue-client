@@ -6,10 +6,10 @@ namespace FactorioItemBrowser\ExportQueue\Client\Client;
 
 use FactorioItemBrowser\ExportQueue\Client\Constant\ConfigKey;
 use Interop\Container\ContainerInterface;
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 
 /**
- *
+ * The factory of the options class.
  *
  * @author BluePsyduck <bluepsyduck@gmx.com>
  * @license http://opensource.org/licenses/GPL-3.0 GPL v3
@@ -20,7 +20,7 @@ class OptionsFactory implements FactoryInterface
      * Creates the options.
      * @param  ContainerInterface $container
      * @param  string $requestedName
-     * @param  null|array $options
+     * @param  array<mixed>|null $options
      * @return Options
      */
     public function __invoke(ContainerInterface $container, $requestedName, array $options = null): Options

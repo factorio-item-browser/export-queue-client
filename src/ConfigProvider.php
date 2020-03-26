@@ -14,7 +14,7 @@ class ConfigProvider
 {
     /**
      * Returns the configuration of the client.
-     * @return array
+     * @return array<mixed>
      */
     public function __invoke(): array
     {

@@ -26,6 +26,7 @@ class ListRequestTest extends TestCase
 
         $this->assertSame('', $request->getCombinationId());
         $this->assertSame('', $request->getStatus());
+        $this->assertSame('', $request->getOrder());
         $this->assertSame(0, $request->getLimit());
     }
 
@@ -55,6 +56,20 @@ class ListRequestTest extends TestCase
 
         $this->assertSame($request, $request->setStatus($status));
         $this->assertSame($status, $request->getStatus());
+    }
+
+    /**
+     * Tests the setting and getting the order.
+     * @covers ::getOrder
+     * @covers ::setOrder
+     */
+    public function testSetAndGetOrder(): void
+    {
+        $order = 'abc';
+        $request = new ListRequest();
+
+        $this->assertSame($request, $request->setOrder($order));
+        $this->assertSame($order, $request->getOrder());
     }
 
     /**
