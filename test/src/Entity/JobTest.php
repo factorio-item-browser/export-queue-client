@@ -28,6 +28,7 @@ class JobTest extends TestCase
         $this->assertSame('', $entity->getId());
         $this->assertSame('', $entity->getCombinationId());
         $this->assertSame([], $entity->getModNames());
+        $this->assertSame('', $entity->getPriority());
         $this->assertSame('', $entity->getStatus());
         $this->assertSame('', $entity->getErrorMessage());
         $this->assertSame('', $entity->getCreator());
@@ -78,6 +79,20 @@ class JobTest extends TestCase
 
         $this->assertSame($entity, $entity->setModNames($modNames));
         $this->assertSame($modNames, $entity->getModNames());
+    }
+
+    /**
+     * Tests the setting and getting the priority.
+     * @covers ::getPriority
+     * @covers ::setPriority
+     */
+    public function testSetAndGetPriority(): void
+    {
+        $priority = 'abc';
+        $entity = new Job();
+
+        $this->assertSame($entity, $entity->setPriority($priority));
+        $this->assertSame($priority, $entity->getPriority());
     }
 
     /**
