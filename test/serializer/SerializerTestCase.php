@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace FactorioItemBrowserTestAsset\ExportQueue\Client;
+namespace FactorioItemBrowserTestSerializer\ExportQueue\Client;
 
 use FactorioItemBrowser\ExportQueue\Client\Serializer\SerializerFactory;
 use Interop\Container\ContainerInterface;

@@ -7,7 +7,7 @@ namespace FactorioItemBrowserTestSerializer\ExportQueue\Client\Entity;
 use DateTime;
 use Exception;
 use FactorioItemBrowser\ExportQueue\Client\Entity\Job;
-use FactorioItemBrowserTestAsset\ExportQueue\Client\SerializerTestCase;
+use FactorioItemBrowserTestSerializer\ExportQueue\Client\SerializerTestCase;
 
 /**
  * The serializer test for the Job class.

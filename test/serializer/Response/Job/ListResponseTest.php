@@ -8,7 +8,7 @@ use DateTime;
 use Exception;
 use FactorioItemBrowser\ExportQueue\Client\Entity\Job;
 use FactorioItemBrowser\ExportQueue\Client\Response\Job\ListResponse;
-use FactorioItemBrowserTestAsset\ExportQueue\Client\SerializerTestCase;
+use FactorioItemBrowserTestSerializer\ExportQueue\Client\SerializerTestCase;
 
 /**
  * The serializer test for the ListResponse class.
