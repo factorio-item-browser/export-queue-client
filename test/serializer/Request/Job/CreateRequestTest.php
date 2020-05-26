@@ -24,7 +24,8 @@ class CreateRequestTest extends SerializerTestCase
     {
         $request = new CreateRequest();
         $request->setCombinationId('abc')
-                ->setModNames(['def', 'ghi']);
+                ->setModNames(['def', 'ghi'])
+                ->setPriority('jkl');
         return $request;
     }
 
@@ -37,6 +38,7 @@ class CreateRequestTest extends SerializerTestCase
         return [
             'combinationId' => 'abc',
             'modNames' => ['def', 'ghi'],
+            'priority' => 'jkl',
         ];
     }
 }

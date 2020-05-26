@@ -55,4 +55,18 @@ class CreateRequestTest extends TestCase
         $this->assertSame($request, $request->setModNames($modNames));
         $this->assertSame($modNames, $request->getModNames());
     }
+
+    /**
+     * Tests the setting and getting the priority.
+     * @covers ::getPriority
+     * @covers ::setPriority
+     */
+    public function testSetAndGetPriority(): void
+    {
+        $priority = 'abc';
+        $request = new CreateRequest();
+
+        $this->assertSame($request, $request->setPriority($priority));
+        $this->assertSame($priority, $request->getPriority());
+    }
 }
