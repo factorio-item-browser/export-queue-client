@@ -21,4 +21,9 @@ interface ListOrder
      * The order is latest job first.
      */
     public const LATEST = 'latest';
+
+    /**
+     * The order is priority based, using creation time as second criterion.
+     */
+    public const PRIORITY = 'priority';
 }

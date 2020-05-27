@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace FactorioItemBrowserTestSerializer\ExportQueue\Client\Response;
 
 use FactorioItemBrowser\ExportQueue\Client\Response\ErrorResponse;
-use FactorioItemBrowserTestAsset\ExportQueue\Client\SerializerTestCase;
+use FactorioItemBrowserTestSerializer\ExportQueue\Client\SerializerTestCase;
 
 /**
  * The serializer test for the ErrorResponse class.

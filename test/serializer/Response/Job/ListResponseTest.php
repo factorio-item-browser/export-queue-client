@@ -8,7 +8,7 @@ use DateTime;
 use Exception;
 use FactorioItemBrowser\ExportQueue\Client\Entity\Job;
 use FactorioItemBrowser\ExportQueue\Client\Response\Job\ListResponse;
-use FactorioItemBrowserTestAsset\ExportQueue\Client\SerializerTestCase;
+use FactorioItemBrowserTestSerializer\ExportQueue\Client\SerializerTestCase;
 
 /**
  * The serializer test for the ListResponse class.
@@ -30,6 +30,7 @@ class ListResponseTest extends SerializerTestCase
         $job1->setId('abc')
              ->setCombinationId('def')
              ->setModNames(['ghi', 'jkl'])
+             ->setPriority('cde')
              ->setStatus('mno')
              ->setErrorMessage('pqr')
              ->setCreator('stu')
@@ -43,6 +44,7 @@ class ListResponseTest extends SerializerTestCase
         $job2->setId('bcd')
              ->setCombinationId('efg')
              ->setModNames(['hij', 'klm'])
+             ->setPriority('fgh')
              ->setStatus('nop')
              ->setErrorMessage('qrs')
              ->setCreator('tuv')
@@ -69,6 +71,7 @@ class ListResponseTest extends SerializerTestCase
                     'id' => 'abc',
                     'combinationId' => 'def',
                     'modNames' => ['ghi', 'jkl'],
+                    'priority' => 'cde',
                     'status' => 'mno',
                     'errorMessage' => 'pqr',
                     'creator' => 'stu',
@@ -82,6 +85,7 @@ class ListResponseTest extends SerializerTestCase
                     'id' => 'bcd',
                     'combinationId' => 'efg',
                     'modNames' => ['hij', 'klm'],
+                    'priority' => 'fgh',
                     'status' => 'nop',
                     'errorMessage' => 'qrs',
                     'creator' => 'tuv',

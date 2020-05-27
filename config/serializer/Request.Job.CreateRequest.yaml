@@ -6,3 +6,5 @@ FactorioItemBrowser\ExportQueue\Client\Request\Job\CreateRequest:
       type: string
     modNames:
       type: array<string>
+    priority:
+      type: string

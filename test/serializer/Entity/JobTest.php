@@ -7,7 +7,7 @@ namespace FactorioItemBrowserTestSerializer\ExportQueue\Client\Entity;
 use DateTime;
 use Exception;
 use FactorioItemBrowser\ExportQueue\Client\Entity\Job;
-use FactorioItemBrowserTestAsset\ExportQueue\Client\SerializerTestCase;
+use FactorioItemBrowserTestSerializer\ExportQueue\Client\SerializerTestCase;
 
 /**
  * The serializer test for the Job class.
@@ -29,6 +29,7 @@ class JobTest extends SerializerTestCase
         $response->setId('abc')
                  ->setCombinationId('def')
                  ->setModNames(['ghi', 'jkl'])
+                 ->setPriority('bcd')
                  ->setStatus('mno')
                  ->setErrorMessage('pqr')
                  ->setCreator('stu')
@@ -50,6 +51,7 @@ class JobTest extends SerializerTestCase
             'id' => 'abc',
             'combinationId' => 'def',
             'modNames' => ['ghi', 'jkl'],
+            'priority' => 'bcd',
             'status' => 'mno',
             'errorMessage' => 'pqr',
             'creator' => 'stu',

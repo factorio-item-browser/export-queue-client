@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace FactorioItemBrowserTestSerializer\ExportQueue\Client\Request\Job;
 
 use FactorioItemBrowser\ExportQueue\Client\Request\Job\CreateRequest;
-use FactorioItemBrowserTestAsset\ExportQueue\Client\SerializerTestCase;
+use FactorioItemBrowserTestSerializer\ExportQueue\Client\SerializerTestCase;
 
 /**
  * The serializer test for the CreateRequest class.
@@ -24,7 +24,8 @@ class CreateRequestTest extends SerializerTestCase
     {
         $request = new CreateRequest();
         $request->setCombinationId('abc')
-                ->setModNames(['def', 'ghi']);
+                ->setModNames(['def', 'ghi'])
+                ->setPriority('jkl');
         return $request;
     }
 
@@ -37,6 +38,7 @@ class CreateRequestTest extends SerializerTestCase
         return [
             'combinationId' => 'abc',
             'modNames' => ['def', 'ghi'],
+            'priority' => 'jkl',
         ];
     }
 }

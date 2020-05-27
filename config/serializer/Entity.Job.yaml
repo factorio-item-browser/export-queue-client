@@ -8,6 +8,8 @@ FactorioItemBrowser\ExportQueue\Client\Entity\Job:
       type: string
     modNames:
       type: array<string>
+    priority:
+      type: string
     status:
       type: string
     errorMessage:
