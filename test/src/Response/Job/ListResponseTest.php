@@ -27,7 +27,7 @@ class ListResponseTest extends TestCase
 
         $this->assertSame([], $response->getJobs());
     }
-    
+
     /**
      * Tests the setting and getting the jobs.
      * @covers ::getJobs
