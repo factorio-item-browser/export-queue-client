@@ -7,4 +7,6 @@
 [![build](https://img.shields.io/github/workflow/status/factorio-item-browser/export-queue-client/CI?logo=github)](https://github.com/factorio-item-browser/export-queue-client/actions)
 [![Codecov](https://img.shields.io/codecov/c/gh/factorio-item-browser/export-queue-client?logo=codecov)](https://codecov.io/gh/factorio-item-browser/export-queue-client)
 
+### DEPRECATED: The Export Queue has been replaced with the [Combination API](https://github.com/factorio-item-browser/combination-api-server), and so has this client be replaced with the [Combination API Client](https://github.com/factorio-item-browser/combination-api-client) respectively.
+
 This library implements a PHP client to access the Export Queue API of the Factorio Item Browser.
